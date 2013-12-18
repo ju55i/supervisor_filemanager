@@ -1,6 +1,10 @@
 Filemanager for Supervisor
 ==========================
 
+Install::
+
+  python setup.py install
+
 Add to your supervisor.conf::
 
   [rpcinterface:filemanager]
