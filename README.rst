@@ -13,5 +13,13 @@ Add to your supervisor.conf::
 
 Test from Python::
 
+  >>> from xmlrpclib import Server
   >>> s = Server("http://admin:admin@localhost:18200/RPC2")
   >>> s.filemanager.listFiles()
+  ['']
+  >>> s.filemanager.putFile('foo.conf','Content goes here')
+  True
+  >>> s.filemanager.listFiles()
+  ['foo.conf']
+  >>> s.filemanager.getFile('foo.conf')
+  'Content goes here'

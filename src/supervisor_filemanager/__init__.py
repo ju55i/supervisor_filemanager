@@ -27,7 +27,7 @@ class FileManagerRPCInterface:
         """
         @param  string  config_file configuration filename
         @param  string  content     content of the configuration file
-        @return boolean             if operation was successful
+        @return boolean             True if operation was successful
         """
         try:
             os.chdir(self.config_dir)
